@@ -9,7 +9,7 @@
     "maintainers": ["lbarry-apsl"],
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": [
         "hr_timesheet",
         "hr_timesheet_time_control",

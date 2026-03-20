@@ -8,7 +8,7 @@
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": ["hr_timesheet", "account_analytic_tag"],
-    "installable": True,
+    "installable": False,
     "data": [
         "views/hr_employee_view.xml",
     ],

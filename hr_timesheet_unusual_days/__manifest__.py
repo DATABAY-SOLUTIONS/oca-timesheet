@@ -8,7 +8,7 @@
     "maintainers": ["CRogos"],
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "auto_install": True,
     "depends": [
         "hr_holidays",

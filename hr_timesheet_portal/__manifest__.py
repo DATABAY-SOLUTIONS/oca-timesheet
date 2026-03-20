@@ -9,6 +9,7 @@
     "website": "https://github.com/OCA/timesheet",
     "author": "Hunki Enterprises BV, Odoo Community Association (OCA)",
     "license": "AGPL-3",
+    "installable": False,
     "depends": [
         "hr_timesheet",
         "portal",
