@@ -8,7 +8,7 @@
     "website": "https://github.com/OCA/timesheet",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": True,
+    "installable": False,
     "application": False,
     "depends": ["sale_timesheet", "project_timeline"],
     "data": ["views/sale_order_views.xml", "views/sale_portal_templates.xml"],
