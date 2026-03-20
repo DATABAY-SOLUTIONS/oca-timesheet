@@ -12,7 +12,7 @@
     "installable": True,
     "depends": [
         "hr_timesheet",
-        "project_timesheet_time_control",
+        "hr_timesheet_time_control",
     ],
     "data": [
         "views/hr_timesheet_views.xml",

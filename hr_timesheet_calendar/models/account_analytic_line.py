@@ -14,7 +14,7 @@ class AccountAnalyticLine(models.Model):
         # or after the previous entry.
         params = self.env["ir.config_parameter"].sudo()
         timesheet_alignment = params.get_param(
-            "project_timesheet_time_control.timesheet_alignment"
+            "hr_timesheet_time_control.timesheet_alignment"
         )
         # default to now
         start_time = fields.Datetime.now()

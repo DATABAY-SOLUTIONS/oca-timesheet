@@ -21,7 +21,7 @@ class TestAccountAnalyticLine(BaseCommon):
         cls.analytic_line_model = cls.env["account.analytic.line"]
         cls.uom_hour = cls.env.ref("uom.product_uom_hour")
         cls.env["ir.config_parameter"].sudo().set_param(
-            "project_timesheet_time_control.timesheet_alignment", "no-gap"
+            "hr_timesheet_time_control.timesheet_alignment", "no-gap"
         )
 
     @freeze_time("2025-04-03")
@@ -86,7 +86,7 @@ class TestAccountAnalyticLine(BaseCommon):
     def test_get_default_start_time_now(self):
         """Test the default start time calculation."""
         self.env["ir.config_parameter"].sudo().set_param(
-            "project_timesheet_time_control.timesheet_alignment", "now"
+            "hr_timesheet_time_control.timesheet_alignment", "now"
         )
         default_start_time = self.analytic_line_model._get_default_start_time()
         self.assertEqual(default_start_time, datetime(2025, 4, 2, 12, 0, 0))
