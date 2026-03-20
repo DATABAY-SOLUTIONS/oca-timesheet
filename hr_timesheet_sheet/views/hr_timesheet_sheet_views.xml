@@ -353,52 +353,45 @@
         <field name="arch" type="xml">
             <search string="Search Timesheet">
                 <field name="date_start" />
+                <field name="employee_id" />
+                <field name="department_id" />
+                <field name="reviewer_id" />
                 <filter
                     name="draft"
                     string="In Draft"
                     domain="[('state','=','draft')]"
-                    help="Draft Timesheet Sheets"
                 />
                 <filter
                     name="confirm"
                     string="Submitted"
                     domain="[('state','=','confirm')]"
-                    help="Submitted Timesheet Sheets"
                 />
                 <filter
                     name="to_review"
                     string="To Review"
                     domain="[('state','=','confirm')]"
-                    help="Timesheet Sheets to Review"
                 />
                 <filter
                     name="message_needaction"
                     string="Unread Messages"
                     domain="[('message_needaction','=',True)]"
                 />
-                <field name="employee_id" />
-                <field name="department_id" />
-                <field name="reviewer_id" />
-                <group expand="0" string="Group By">
-                    <filter
-                        name="groupby_employees"
-                        string="Employees"
-                        domain="[]"
-                        context="{'group_by':'employee_id'}"
-                    />
-                    <filter
-                        name="groupby_department"
-                        string="Department"
-                        domain="[]"
-                        context="{'group_by':'department_id'}"
-                    />
-                    <filter
-                        name="groupby_reviewer"
-                        string="Reviewer"
-                        domain="[]"
-                        context="{'group_by':'reviewer_id'}"
-                    />
-                </group>
+                <separator />
+                <filter
+                    name="groupby_employees"
+                    string="Employees"
+                    context="{'group_by':'employee_id'}"
+                />
+                <filter
+                    name="groupby_department"
+                    string="Department"
+                    context="{'group_by':'department_id'}"
+                />
+                <filter
+                    name="groupby_reviewer"
+                    string="Reviewer"
+                    context="{'group_by':'reviewer_id'}"
+                />
             </search>
         </field>
     </record>
